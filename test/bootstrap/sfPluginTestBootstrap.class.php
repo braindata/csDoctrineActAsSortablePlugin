@@ -67,7 +67,7 @@ class sfPluginTestBootstrap
 
     // Using Doctrine instead of Doctrine_Core keeps it symfony 1.2 compatible, which uses
     Doctrine_Core::loadModels(dirname(__FILE__).'/../fixtures/project/lib/model/doctrine', Doctrine_Core::MODEL_LOADING_CONSERVATIVE);
-    Doctrine_Core::createTablesFromArray(Doctrine::getLoadedModels());
+    Doctrine_Core::createTablesFromArray(Doctrine_Core::getLoadedModels());
     Doctrine_Core::loadData(dirname(__FILE__).'/../fixtures/project/data/fixtures/categories.yml');
   }
 
